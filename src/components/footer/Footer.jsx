@@ -17,7 +17,6 @@ export default function Footer() {
 
 const Wrapper = styled.div`
   width: 100%;
-  border-top: 1px solid #1a1a1a;
   background-color: #4a25ed;
 `;
 
