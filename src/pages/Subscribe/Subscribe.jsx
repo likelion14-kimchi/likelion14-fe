@@ -2,41 +2,28 @@ import styled from "styled-components";
 import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 
-import buttonImage from "../../assets/images/buttonImage.svg";
+import letterImage from "../../assets/images/letter.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
 
-import {useNavigate} from "react-router-dom";
-
 export default function Main() {
-  const navigate = useNavigate();
-
   return (
     <Wrapper>
       <TopSection
-        smallText="월요일에 만나는"
-        highlightText="프론트엔드"
-        normalText="한 스푼."
+        smallText="매주 만나는"
+        highlightText="멋쟁이사자"
+        normalText="뉴스레터."
         images={[
           {
-            src: buttonImage,
+            src: letterImage,
             width: 420,
             x: -40,
             y: -80,
-          },
-          {
-            src: wheelImage,
-            width: 140,
-            x: 300,
-            y: 0,
           },
         ]}
       />
 
       <ButtonBox>
-        <Button 
-          buttonName="구독하기" 
-          onClick={() => navigate("/subscribe")}
-        />
+        <Button buttonName="구독하기" $active={false} />
       </ButtonBox>
     </Wrapper>
   );
