@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 import CollabSection from "./CollabSection";
 import SessionSection from "./SessionSection";
@@ -25,9 +24,6 @@ export default function Main() {
       />
       <CollabSection />
       <SessionSection />
-      <ButtonBox>
-        <Button buttonName="가입하기 " $active={false} />
-      </ButtonBox>
     </Wrapper>
   );
 }
@@ -35,11 +31,4 @@ export default function Main() {
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-`;
-
-const ButtonBox = styled.div`
-  margin-top: 500px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 120px;
 `;
