@@ -6,11 +6,7 @@ import HackertonSection from "../hackerton/HackertonSection";
 import buttonImage from "../../assets/images/buttonImage.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
 
-import { useNavigate } from "react-router-dom";
-
 export default function Main() {
-  const navigate = useNavigate();
-
   return (
     <Wrapper>
       <TopSection
@@ -36,10 +32,6 @@ export default function Main() {
       <IntroduceSection />
 
       <HackertonSection />
-
-      <ButtonBox>
-        <Button buttonName="구독하기" onClick={() => navigate("/subscribe")} />
-      </ButtonBox>
     </Wrapper>
   );
 }
