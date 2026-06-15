@@ -2,15 +2,11 @@ import styled from "styled-components";
 import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 import IntroduceSection from "../introduce/IntroduceSection";
-
+import HackertonSection from "../hackerton/HackertonSection";
 import buttonImage from "../../assets/images/buttonImage.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
 
-import {useNavigate} from "react-router-dom";
-
 export default function Main() {
-  const navigate = useNavigate();
-
   return (
     <Wrapper>
       <TopSection
@@ -35,12 +31,7 @@ export default function Main() {
 
       <IntroduceSection />
 
-      <ButtonBox>
-        <Button 
-          buttonName="구독하기" 
-          onClick={() => navigate("/subscribe")}
-        />
-      </ButtonBox>
+      <HackertonSection />
     </Wrapper>
   );
 }
