@@ -1,34 +1,35 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export default function Button({ buttonName, onClick}) {
-    return (
-        <StyledButton onClick={onClick}>
-            {buttonName}
-        </StyledButton>
-    );
+export default function Button({ buttonName, onClick }) {
+  return <StyledButton onClick={onClick}>{buttonName}</StyledButton>;
 }
+
 const StyledButton = styled.button`
-    width : 350px;
-    height : 110px;
-    
-    background-color: #FFFFFF;
-    color: #4A25ED;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: clamp(220px, 30vw, 350px);
+  height: clamp(70px, 10vw, 110px);
 
-    border-radius: 55px;
-    border: 2px solid #4A25ED;
+  background-color: #ffffff;
+  color: #4a25ed;
 
-    font-size: 35px;
-    font-family: Pretendard Variable;
-    font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    cursor: pointer;
+  border: 2px solid #4a25ed;
+  border-radius: 999px;
 
-     &:hover {
-        background-color: #4A25ED;
-        color: #FFFFFF;
-    }
- `;
+  font-size: clamp(20px, 3vw, 35px);
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: #4a25ed;
+    color: #ffffff;
+  }
+`;
