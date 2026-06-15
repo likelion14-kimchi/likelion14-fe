@@ -16,9 +16,9 @@ export default function Main() {
         images={[
           {
             src: letterImage,
-            width: 420,
-            x: -40,
-            y: -70,
+            width: 300,
+            x: +50,
+            y: -40,
           },
         ]}
       />
@@ -33,14 +33,11 @@ export default function Main() {
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  position: relative;
 `;
 
 const ButtonBox = styled.div`
-  position: absolute;
-  bottom: 135px;
-
+  margin-top: 500px;
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-bottom: 120px;
 `;
