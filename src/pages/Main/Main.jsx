@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
+import IntroduceSection from "../introduce/IntroduceSection";
 
 import buttonImage from "../../assets/images/buttonImage.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
@@ -28,6 +29,8 @@ export default function Main() {
         ]}
       />
 
+      <IntroduceSection />
+
       <ButtonBox>
         <Button buttonName="구독하기" $active={false} />
       </ButtonBox>
@@ -37,15 +40,11 @@ export default function Main() {
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
-  position: relative;
 `;
 
 const ButtonBox = styled.div`
-  position: absolute;
-  bottom: 135px;
-
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 80px 0 135px;
 `;
