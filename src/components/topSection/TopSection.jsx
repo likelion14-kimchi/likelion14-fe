@@ -40,18 +40,30 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  font-family: "Pretendard Variable", sans-serif;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: 560px;
+  }
 `;
 
 const TextBox = styled.div`
   text-align: center;
   margin-top: 100px;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 70px;
+  }
 `;
 
 const SmallText = styled.p`
   margin: 0;
 
   color: white;
-  font-size: 40px;
+  font-size: clamp(24px, 4vw, 40px);
   font-weight: 600;
 `;
 
@@ -59,8 +71,9 @@ const Title = styled.h1`
   margin: 20px 0 0;
 
   color: white;
-  font-size: 72px;
+  font-size: clamp(40px, 7vw, 72px);
   font-weight: 700;
+  line-height: 1.15;
 `;
 
 const Highlight = styled.span`
@@ -70,18 +83,30 @@ const Highlight = styled.span`
 const ImageContainer = styled.div`
   position: relative;
 
-  width: 400px;
+  width: min(400px, 90vw);
   height: 220px;
 
   margin-top: 80px;
+
+  @media (max-width: 768px) {
+    height: 180px;
+    margin-top: 60px;
+  }
 `;
 
 const Image = styled.img`
   position: absolute;
 
   width: ${({ $width }) => $width}px;
+  max-width: 100%;
   height: auto;
 
   left: ${({ $x }) => $x}px;
   top: ${({ $y }) => $y}px;
+
+  @media (max-width: 768px) {
+    width: ${({ $width }) => $width * 0.75}px;
+    left: ${({ $x }) => $x * 0.75}px;
+    top: ${({ $y }) => $y * 0.75}px;
+  }
 `;
