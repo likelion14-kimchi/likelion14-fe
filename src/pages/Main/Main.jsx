@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 import IntroduceSection from "../introduce/IntroduceSection";
-
+import HackertonSection from "../hackerton/HackertonSection";
 import buttonImage from "../../assets/images/buttonImage.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
 
@@ -30,10 +30,7 @@ export default function Main() {
       />
 
       <IntroduceSection />
-
-      <ButtonBox>
-        <Button buttonName="구독하기" $active={false} />
-      </ButtonBox>
+      <HackertonSection />
     </Wrapper>
   );
 }

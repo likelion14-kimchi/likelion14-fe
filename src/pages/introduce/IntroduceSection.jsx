@@ -103,8 +103,8 @@ const Wrapper = styled.section`
 const QuestionNumber = styled.h2`
   margin: 0;
   color: #4a25ed;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 75px;
+  font-weight: 600;
 `;
 
 const Dots = styled.div`
@@ -115,7 +115,7 @@ const Dots = styled.div`
 
   span {
     color: #4a25ed;
-    font-size: 28px;
+    font-size: 50px;
     line-height: 0.7;
   }
 `;
@@ -123,8 +123,8 @@ const Dots = styled.div`
 const Title = styled.h3`
   margin: 0;
   color: #4a25ed;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 75px;
+  font-weight: 600;
 `;
 
 const AnswerBox = styled.div`
