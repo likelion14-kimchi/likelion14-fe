@@ -3,7 +3,22 @@ import CollabCard from "../../components/collabCard/CollabCard";
 import humanImage from "../../assets/images/human.png";
 import Button from "../../components/button/Button";
 
+import { useState } from 'react';
+
 export default function CollabSection() {
+    const [page, setPage] = useState(1);
+    const sessionData = [
+        ["1주차 세션", "2주차 세션", "3주차 세션"],
+        ["4주차 세션", "5주차 세션", "6주차 세션"],
+        ["7주차 세션", "8주차 세션", "9주차 세션"]
+    ];
+    const handleNextPage = () => {
+        setPage((prevPage) => (prevPage < sessionData.length ? prevPage + 1 : 1));
+    };
+    const handlePrevPage = () => {
+        setPage((prevPage) => (prevPage > 1 ? prevPage - 1 : sessionData.length));
+    };
+
     return (
         <Wrapper>
             <TitleBox>
@@ -18,13 +33,13 @@ export default function CollabSection() {
             <HumanBox>
                 <img src={humanImage} alt="Human" />
             </HumanBox>
-            
             <CardBox>
-                <CollabCard title="1주차 세션" backgroundColor="#FFFFFF"/>
-                <CollabCard title="2주차 세션" backgroundColor="#FFFFFF"/>
-                <CollabCard title="3주차 세션" backgroundColor="#FFFFFF"/>
+                 <ArrowButton onClick={handlePrevPage} $hidden={page === 1}>‹</ArrowButton>
+                {sessionData[page - 1].map((session) => (
+                    <CollabCard key={session} title={session} backgroundColor='#FFFFFF' />
+                ))}
+                <ArrowButton onClick={handleNextPage} $hidden={page === sessionData.length}>›</ArrowButton>
             </CardBox>
-
             <ButtonBox>
                 <Button buttonName="가입하기 " $active={false} />
             </ButtonBox>
@@ -67,7 +82,16 @@ const ButtonBox = styled.div`
   justify-content: center;
   margin-bottom: 120px;
 `;
+const ArrowButton = styled.button`
+    border: none;
+    background: none;
 
+    color: #4A25ED;
+    font-size: 80px;
+    cursor: pointer;
+
+    visibility: ${({ $hidden }) => ($hidden ? "hidden" : "visible")};
+`;
 const Title = styled.div`
     color: #4A25ED;
     font-size: 75px;
