@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default function Button({ buttonName, onClick, $active }) {
+export default function Button({ buttonName, onClick}) {
     return (
-        <StyledButton onClick={onClick} $active={$active}>
+        <StyledButton onClick={onClick}>
             {buttonName}
         </StyledButton>
     );
@@ -11,8 +11,8 @@ const StyledButton = styled.button`
     width : 350px;
     height : 110px;
     
-    background-color: ${({ $active }) => ($active ? '#4A25ED' : '#FFFFFF')};
-    color: ${({ $active }) => ($active ? '#FFFFFF' : '#4A25ED')};
+    background-color: #FFFFFF;
+    color: #4A25ED;
     
     display: flex;
     justify-content: center;
@@ -26,4 +26,9 @@ const StyledButton = styled.button`
     font-weight: 500;
 
     cursor: pointer;
+
+     &:hover {
+        background-color: #4A25ED;
+        color: #FFFFFF;
+    }
  `;
