@@ -11,7 +11,7 @@ export default function Header() {
             <MenuContainer>
                 <Divider />
                 <MenuText onClick={() => navigate("/")}> 홈 </MenuText>
-                <MenuText> 구독하기</MenuText> 
+                <MenuText onClick={() => navigate("/subscribe")}> 구독하기</MenuText> 
             </MenuContainer> 
         </Wrapper>
     );
@@ -40,13 +40,14 @@ const TitleText = styled.div`
     font-size: 25px;
     font-family: Pretendard Variable;
     font-weight: 300;
-    word-wrap: break-wor
+    word-wrap: break-word
 `;
 const MenuText = styled.div`
     color: #4A25ED;
     font-size: 30px;
     font-family: Pretendard Variable;
     font-weight: 300;
+    cursor: pointer;
     word-wrap: break-word
 `;
 

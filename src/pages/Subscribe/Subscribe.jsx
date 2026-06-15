@@ -1,15 +1,20 @@
 import styled from "styled-components";
-import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 import CollabSection from "./CollabSection";
 import SessionSection from "./SessionSection";
 
 import letterImage from "../../assets/images/letter.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
+import {useNavigate} from "react-router-dom";
 
 export default function Main() {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
+        <BackButton onClick={() => navigate("/")}>
+        ‹
+      </BackButton>
       <TopSection
         smallText="매주 만나는"
         highlightText="멋쟁이사자"
@@ -25,9 +30,6 @@ export default function Main() {
       />
       <CollabSection />
       <SessionSection />
-      <ButtonBox>
-        <Button buttonName="가입하기 " $active={false} />
-      </ButtonBox>
     </Wrapper>
   );
 }
@@ -35,11 +37,14 @@ export default function Main() {
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
+  position: relative;
 `;
+const BackButton = styled.div`
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    font-size: 70px;
+    color: #FFFFFF;
 
-const ButtonBox = styled.div`
-  margin-top: 500px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 120px;
+    cursor: pointer;
 `;

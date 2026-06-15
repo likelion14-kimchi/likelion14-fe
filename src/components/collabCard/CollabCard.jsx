@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default function CollabCard({ title, $ }) {
+export default function CollabCard({ title , backgroundColor = "#FDF9FF"}) {
     return (
-        <Card>
+        <Card $backgroundColor={backgroundColor}>
             {title}
         </Card>
     );
@@ -16,7 +16,7 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
 
-    background-color: #FDF9FF;
+    background-color: ${props => props.$backgroundColor};
     color: #4A25ED;
 
     font-size: 35px;
