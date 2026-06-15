@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "../../components/button/Button";
 import TopSection from "../../components/topSection/TopSection";
 import CollabSection from "./CollabSection";
+import SessionSection from "./SessionSection";
 
 import letterImage from "../../assets/images/letter.svg";
 import wheelImage from "../../assets/images/wheelImage.svg";
@@ -23,6 +24,7 @@ export default function Main() {
         ]}
       />
       <CollabSection />
+      <SessionSection />
       <ButtonBox>
         <Button buttonName="가입하기 " $active={false} />
       </ButtonBox>

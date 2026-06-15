@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function CollabCard({ title }) {
+export default function CollabCard({ title, $ }) {
     return (
         <Card>
             {title}

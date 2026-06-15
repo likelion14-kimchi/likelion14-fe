@@ -54,6 +54,7 @@ const CardBox = styled.div`
 `;
 const DescriptionBox = styled.div`
     margin-top: 200px;
+    margin-bottom: 200px;
 
     display: flex;
     flex-direction: column;
