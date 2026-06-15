@@ -46,7 +46,7 @@ export default function HackertonSection() {
 
 const Wrapper = styled.section`
   width: 100%;
-  background: #fbf7ff;
+  background: #fdf9ff;
 
   display: flex;
   flex-direction: column;
