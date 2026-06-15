@@ -41,7 +41,7 @@ export default function CollabSection() {
                 <ArrowButton onClick={handleNextPage} $hidden={page === sessionData.length}>›</ArrowButton>
             </CardBox>
             <ButtonBox>
-                <Button buttonName="가입하기 " $active={false} />
+                <Button buttonName="가입하기 " onClick={() => { window.open('https://skulikelion.com', '_blank'); }} />
             </ButtonBox>
         </Wrapper>
     );
